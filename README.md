@@ -1,2 +1,5 @@
 # vanila-js-todo-app
-Created with CodeSandbox
+
+### Summary
+
+A simple todo app writen by vanila JavaScript. (WIP)
