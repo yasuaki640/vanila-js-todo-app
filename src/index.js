@@ -15,7 +15,12 @@ const onClickAdd = () => {
   const completeButton = document.createElement("button");
   completeButton.innerText = "Complete";
   completeButton.addEventListener("click", () => {
-    alert("Complete");
+    const completeTarget = completeButton.parentNode;
+    document.getElementById("complete-list").appendChild(completeTarget);
+
+    completeTarget.removeChild(completeButton);
+    completeTarget.removeChild(deleteButton);
+    completeTarget.appendChild(returnButton);
   });
 
   const deleteButton = document.createElement("button");
@@ -23,6 +28,13 @@ const onClickAdd = () => {
   deleteButton.addEventListener("click", () => {
     const deleteTarget = deleteButton.parentNode;
     document.getElementById("incomplete-list").removeChild(deleteTarget);
+  });
+
+  const returnButton = document.createElement("button");
+  returnButton.innerText = "Return";
+  returnButton.addEventListener("click", () => {
+    const returnTarget = returnButton.parentNode;
+    document.getElementById("complete-list").removeChild(returnTarget);
   });
 
   div.appendChild(li);
