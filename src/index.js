@@ -10,7 +10,23 @@ const onClickAdd = () => {
 
   const li = document.createElement("li");
   li.innerText = inputText;
+
+  // create buttons
+  const completeButton = document.createElement("button");
+  completeButton.innerText = "Complete";
+  completeButton.addEventListener("click", () => {
+    alert("Complete");
+  });
+
+  const deleteButton = document.createElement("button");
+  deleteButton.innerText = "Delete";
+  deleteButton.addEventListener("click", () => {
+    alert("Delete");
+  });
+
   div.appendChild(li);
+  div.appendChild(completeButton);
+  div.appendChild(deleteButton);
 
   document.getElementById("incomplete-list").appendChild(div);
 };
