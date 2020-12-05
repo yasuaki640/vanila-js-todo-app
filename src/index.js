@@ -35,6 +35,12 @@ const onClickAdd = () => {
   returnButton.addEventListener("click", () => {
     const returnTarget = returnButton.parentNode;
     document.getElementById("complete-list").removeChild(returnTarget);
+
+    returnTarget.removeChild(returnButton);
+    returnTarget.appendChild(completeButton);
+    returnTarget.appendChild(deleteButton);
+
+    document.getElementById("incomplete-list").appendChild(returnTarget);
   });
 
   div.appendChild(li);
