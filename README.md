@@ -2,4 +2,4 @@
 
 ## Summary
 
-A simple todo app writen by vanila JavaScript. (WIP)
+A minimum todo app writen by vanila JavaScript.
